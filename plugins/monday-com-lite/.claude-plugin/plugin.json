@@ -1,0 +1,9 @@
+{
+  "name": "monday-com-lite",
+  "version": "1.0.0",
+  "description": "Lightweight Monday.com management plugin. Same coverage as monday-com, ~70% fewer tokens. Use for everyday Monday.com operations when context window space matters.",
+  "author": { "name": "Dima" },
+  "license": "MIT",
+  "repository": "https://github.com/BinatrixAI/binatrix-plugins",
+  "keywords": ["monday-com", "crm", "project-management", "graphql", "lightweight"]
+}

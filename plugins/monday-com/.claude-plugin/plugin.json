@@ -1,0 +1,9 @@
+{
+  "name": "monday-com",
+  "version": "1.0.0",
+  "description": "Manage Monday.com boards, items, columns, groups, automations, and workspaces. Use this plugin for any Monday.com CRM, project management, or board operations.",
+  "author": { "name": "Dima" },
+  "license": "MIT",
+  "repository": "https://github.com/BinatrixAI/binatrix-plugins",
+  "keywords": ["monday-com", "crm", "project-management", "graphql", "work-os"]
+}

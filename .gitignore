@@ -1,0 +1,16 @@
+# Build artifacts
+dist/
+*.plugin
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (if scripts need deps later)
+node_modules/
