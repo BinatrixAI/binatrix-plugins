@@ -1,9 +1,0 @@
-{
-  "name": "binatrix-plugins",
-  "version": "1.0.0",
-  "description": "Binatrix plugin marketplace for Claude Code — Monday.com management, CRM architecture, and workflow automation.",
-  "author": { "name": "Dima" },
-  "license": "MIT",
-  "repository": "https://github.com/BinatrixAI/binatrix-plugins",
-  "keywords": ["monday-com", "crm", "project-management", "binatrix"]
-}

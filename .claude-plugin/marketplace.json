@@ -1,0 +1,30 @@
+{
+  "name": "binatrix-plugins",
+  "owner": {
+    "name": "Dima",
+    "url": "https://github.com/BinatrixAI"
+  },
+  "metadata": {
+    "description": "Binatrix plugin marketplace for Claude Code — Monday.com management, CRM architecture, and workflow automation.",
+    "version": "1.0.0",
+    "homepage": "https://github.com/BinatrixAI/binatrix-plugins"
+  },
+  "plugins": [
+    {
+      "name": "monday-com",
+      "source": "./plugins/monday-com",
+      "version": "1.0.0",
+      "description": "Manage Monday.com boards, items, columns, groups, automations, and workspaces. Full CRM architecture, column formatting, and API reference.",
+      "keywords": ["monday-com", "crm", "project-management", "graphql", "work-os"],
+      "category": "productivity"
+    },
+    {
+      "name": "monday-com-lite",
+      "source": "./plugins/monday-com-lite",
+      "version": "1.0.0",
+      "description": "Lightweight Monday.com management plugin. Same coverage as monday-com, ~70% fewer tokens.",
+      "keywords": ["monday-com", "crm", "project-management", "graphql", "lightweight"],
+      "category": "productivity"
+    }
+  ]
+}
