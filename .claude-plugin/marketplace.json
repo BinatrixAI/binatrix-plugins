@@ -5,8 +5,8 @@
     "url": "https://github.com/BinatrixAI"
   },
   "metadata": {
-    "description": "Binatrix plugin marketplace for Claude Code — Monday.com management, CRM architecture, and workflow automation.",
-    "version": "1.0.0",
+    "description": "Binatrix plugin marketplace for Claude Code — Monday.com, cmux terminal control, CRM architecture, and workflow automation.",
+    "version": "1.1.0",
     "homepage": "https://github.com/BinatrixAI/binatrix-plugins"
   },
   "plugins": [
@@ -25,6 +25,14 @@
       "description": "Lightweight Monday.com management plugin. Same coverage as monday-com, ~70% fewer tokens.",
       "keywords": ["monday-com", "crm", "project-management", "graphql", "lightweight"],
       "category": "productivity"
+    },
+    {
+      "name": "cmux",
+      "source": "./plugins/cmux",
+      "version": "1.0.0",
+      "description": "Control cmux terminal multiplexer — workspaces, panes, splits, browser automation, sidebar metadata, notifications, and terminal I/O for AI coding workflows.",
+      "keywords": ["cmux", "terminal", "multiplexer", "browser-automation", "notifications", "splits"],
+      "category": "developer-tools"
     }
   ]
 }
