@@ -5,8 +5,8 @@
     "url": "https://github.com/BinatrixAI"
   },
   "metadata": {
-    "description": "Binatrix plugin marketplace for Claude Code — Monday.com, cmux terminal control, CRM architecture, and workflow automation.",
-    "version": "1.1.0",
+    "description": "Binatrix plugin marketplace for Claude Code — Monday.com, cmux terminal control, Typst PDF generation, CRM architecture, and workflow automation.",
+    "version": "1.2.0",
     "homepage": "https://github.com/BinatrixAI/binatrix-plugins"
   },
   "plugins": [
@@ -32,6 +32,14 @@
       "version": "1.0.0",
       "description": "Control cmux terminal multiplexer — workspaces, panes, splits, browser automation, sidebar metadata, notifications, and terminal I/O for AI coding workflows.",
       "keywords": ["cmux", "terminal", "multiplexer", "browser-automation", "notifications", "splits"],
+      "category": "developer-tools"
+    },
+    {
+      "name": "typst",
+      "source": "./plugins/typst",
+      "version": "1.0.0",
+      "description": "Generate PDFs from Typst — primarily CVs / résumés / cover letters via @preview/modern-cv, also presentations (touying) and general documents. Activates on 'make me a resume', 'convert to PDF', 'PDF version', or any Typst-shaped request.",
+      "keywords": ["typst", "resume", "cv", "pdf", "modern-cv", "awesome-cv", "cover-letter", "touying", "typesetting"],
       "category": "developer-tools"
     }
   ]

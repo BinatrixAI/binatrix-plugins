@@ -1,0 +1,59 @@
+{
+  "skill_name": "typst",
+  "evals": [
+    {
+      "id": 0,
+      "name": "resume-from-chat-content",
+      "prompt": "i need a resume PDF asap, can u make one. here's my stuff:\n\nname: Dima Volkov\nrole: senior software engineer, looking for staff roles\nemail: dima@oqva.io\nphone: (+1) 415-555-0143\ngithub: dimavolkov\nlinkedin: dimavolkov\nlocation: SF Bay Area\n\njobs:\n- staff eng at OQVA, jan 2024 - now. built the entire workers infra for the tablet monitoring system. cut alerting latency from 12 min to under 30 sec. mentored 3 engineers.\n- senior at Binatrix, 2021 - 2023. led migration off vercel onto cloudflare workers + d1. shipped a clerk auth integration that handles 50k MAU.\n- backend eng at Acme, 2019 - 2021. wrote the entire deployment pipeline from scratch. ~200 deploys/month with zero rollbacks.\n\neducation:\nB.S. Computer Science, Stanford, 2015 - 2019\n\nskills: typescript, rust, go, cloudflare workers (deep), aws, postgres, d1, clerk, n8n\n\nput the PDF somewhere obvious. it's for a staff role at notable-company. classic look pls, nothing too colorful.",
+      "expected_output": "Compiled cv.pdf in cwd using @preview/modern-cv with Dima's info filled in, font preflight handled (likely NCM override), preview PNG rendered, absolute path reported.",
+      "files": [],
+      "assertions": [
+        {"id": "pdf_exists", "text": "A non-trivial .pdf file (>= 5 KB) was produced"},
+        {"id": "typ_source_exists", "text": "A .typ source file was produced"},
+        {"id": "preview_png_exists", "text": "A preview .png was rendered"},
+        {"id": "uses_modern_cv", "text": "The .typ source imports @preview/modern-cv"},
+        {"id": "contains_user_name", "text": "The .typ source contains 'Dima Volkov'"},
+        {"id": "contains_oqva_job", "text": "The .typ source mentions OQVA"},
+        {"id": "contains_stanford", "text": "The .typ source mentions Stanford"},
+        {"id": "transcript_explains_font_path", "text": "TRANSCRIPT.md acknowledges the font situation"},
+        {"id": "absolute_path_reported", "text": "TRANSCRIPT.md contains an absolute /Users/dima/... path to the PDF"}
+      ]
+    },
+    {
+      "id": 1,
+      "name": "cover-letter-typst",
+      "prompt": "write me a cover letter PDF for the Senior Platform Engineer role at Cloudflare. background: I've been doing edge-first architecture for 5 years, shipped a Workers-based monitoring system that handles 12k devices, comfortable with R2/D1/Durable Objects. recipient is just 'Hiring Team, Cloudflare, San Francisco'. my name is Dima Volkov, dima@oqva.io. keep it under one page, professional tone.",
+      "expected_output": "Compiled cover-letter.pdf using modern-cv letter mode, single page, today's date, professional tone, preview rendered, absolute path reported.",
+      "files": [],
+      "assertions": [
+        {"id": "pdf_exists", "text": "A non-trivial .pdf file (>= 5 KB) was produced"},
+        {"id": "typ_source_exists", "text": "A .typ source file was produced"},
+        {"id": "preview_png_exists", "text": "A preview .png was rendered"},
+        {"id": "uses_letter_mode", "text": "The .typ uses letter.with(...) — not resume.with(...)"},
+        {"id": "single_page", "text": "PDF is exactly one page"},
+        {"id": "mentions_cloudflare", "text": "The .typ mentions Cloudflare"},
+        {"id": "mentions_workers_or_edge", "text": "The .typ mentions Workers or edge architecture"},
+        {"id": "uses_today_date", "text": "The .typ uses datetime.today() or a 2026 date"},
+        {"id": "absolute_path_reported", "text": "TRANSCRIPT.md contains an absolute /Users/dima/... path"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "generic-pdf-from-prose",
+      "prompt": "I have this short summary of our Q4 architecture decisions. Can you give me a PDF version I can hand to my boss? [markdown with ## ### headings, '<5%' and '<30 sec' inline]",
+      "expected_output": "Compiled output.pdf using a hand-rolled document template (NOT modern-cv/neat-cv). Markdown headings converted to Typst =/==/===. Angle brackets handled without label-parsing errors. Preview rendered, absolute path reported.",
+      "files": [],
+      "assertions": [
+        {"id": "pdf_exists", "text": "A non-trivial .pdf file (>= 5 KB) was produced"},
+        {"id": "typ_source_exists", "text": "A .typ source file was produced"},
+        {"id": "preview_png_exists", "text": "A preview .png was rendered"},
+        {"id": "not_resume_template", "text": "The .typ does NOT import modern-cv or neat-cv"},
+        {"id": "has_typst_headings", "text": "The .typ has top-level (=) and sub-level (==) headings"},
+        {"id": "mentions_q4_arch", "text": "The .typ mentions 'Q4 Architecture'"},
+        {"id": "mentions_hybrid_arch", "text": "The .typ mentions 'Hybrid' or 'two-path'"},
+        {"id": "handles_angle_brackets", "text": "Compile succeeded — angle brackets did not block compilation"},
+        {"id": "absolute_path_reported", "text": "TRANSCRIPT.md contains an absolute /Users/dima/... path"}
+      ]
+    }
+  ]
+}

@@ -14,3 +14,11 @@ Thumbs.db
 
 # Node (if scripts need deps later)
 node_modules/
+
+# Skill research (local, not for publish)
+clearsmog-claude-skills-typst-1.0.1/
+typst-skill-context.md
+
+# Skill-creator iteration workspaces (test runs, eval outputs, generated PDFs/PNGs)
+# Keep the skill itself (plugins/*/skills/<name>/), drop everything ending in -workspace/
+plugins/*/skills/*-workspace/

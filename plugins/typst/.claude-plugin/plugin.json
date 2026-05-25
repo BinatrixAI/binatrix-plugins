@@ -1,0 +1,9 @@
+{
+  "name": "typst",
+  "version": "1.0.0",
+  "description": "Generate PDFs from Typst — primarily CVs / résumés / cover letters via @preview/modern-cv, also presentations (touying) and general documents. Activates on 'make me a resume', 'convert to PDF', 'PDF version', or any Typst-shaped request.",
+  "author": { "name": "Dima" },
+  "license": "MIT",
+  "repository": "https://github.com/BinatrixAI/binatrix-plugins",
+  "keywords": ["typst", "resume", "cv", "pdf", "modern-cv", "awesome-cv", "cover-letter", "touying", "presentations", "typesetting"]
+}
